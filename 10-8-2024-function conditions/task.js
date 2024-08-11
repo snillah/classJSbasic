@@ -12,7 +12,10 @@ switch(action){
     break;
     case "remider": result = num1 % num2;
     break;
+    default: result = "No such operation is there, please give valid operation"
 }
  return result
 }
-console.log("Result:",calc("sub",40,5));
+console.log("add:",calc("add",40,5));
+console.log("sub:",calc("sub",40,5));
+console.log("new:",calc("err",40,5));
