@@ -1,15 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 class JS bassic </title>
-</head>
-<body>
-    <h1>Hoisting</h1>
-<script src="./hoistingVariable.js"></script>
-<script src="./hoistingFunc.js"></script>
-<script src="./scopeVariable.js"></script>
-<!-- <script src="./JsObjectNotation.js"></script> -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4 class JS bassic</title>
+  </head>
+  <body>
+    <h1>Hoisting and Function and If and if else and switch</h1>
+    <h3>Hoisting</h3>
+    <p>Normally the run times is 2 times</p>
+    <li>Memory Allocation - MA</li>
+    <li>Execute time - Exe</li>
+    <ul>
+      <li><h4>Var Hoisting</h4></li>
+      <ul>
+        <li><h5>Steps:</h5></li>
+        <ul>
+          <li>
+            MA(frist run)- variable name initial set a value is
+            <em>"undefine"</em>=> this process is called hoisting
+            <br />
+            <strong
+              >In Global(windows) Scope is shows the value undefine</strong
+            >
+            <br /><br />
+          </li>
+          <li>Execute(second run)- variable name as assign a actuall value</li>
+        </ul>
+      </ul>
+    </ul>
+    <!-- let and const -->
+    <ul>
+      <li><h4>Let and const Hoisting</h4></li>
+      <ul>
+        <li><h5>Steps:</h5></li>
+        <ul>
+          <li>
+            MA(frist run)- variable name initial set a value is
+            <em>"name unavailable"</em>=> this process is called hoisting
+            <br />
+            <strong
+              >In Script i.e => <em>lexical scope is temprory dead zone</em>,
+              shows the value "value unavailable"</strong
+            >
+          </li>
+          <br /><br />
+          <li>Execute(second run)- variable name as assign a actuall value</li>
+        </ul>
+      </ul>
+    </ul>
+
+    <!-- Function =>In "js" first preference is function only-->
+    <ul>
+      <li><h4>Function Hoisting</h4></li>
+      <ul>
+        <li><h5>Steps:</h5></li>
+        <ul>
+          <li>
+            MA (frist run)
+            <ul>
+              <li><strong>Function(){ var and let/const}</strong></li>
+              <ul>
+                <li>
+                  MA(frist run)- Normal function inside declare a "VAR" and "LET
+                  & CONST" variable name initial set in <em>Local Scope</em> a
+                  value is <em>for VAR => "undefine"</em> & in local scope
+                  <strong
+                    >In Script i.e =>
+                    <em>lexical scope is temprory dead zone</em>, shows the
+                    value</strong
+                  >
+                  <em>for LET AND CONST => "value unavailable"</em>=> this
+                  process is called hoisting
+                  <strong>return is => undefine</strong>
+                </li>
+              </ul>
+              <li>
+                <strong>
+                  Arrow function assign "Var"<em>inside</em> that declare
+                  <em>VAR or LET and CONST</em>
+                </strong>
+                <ul>
+                  <li>
+                    <h4>Assign Arrow func "Var" in Global scope</h4>
+                    <p>
+                      MA(frist run)- variable name initial set a value is
+                      <em>"undefine"</em>=> this process is called hoisting
+                      <br />
+                      <strong
+                        >In Global(windows) Scope is shows the value
+                        undefine</strong
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <h4>
+                      Inside Arrow func "Var and Let or Const" in Local scope
+                      once accomplished it will closed
+                    </h4>
+                    <p>
+                      MA(frist run)- Normal function inside declare a "VAR" and
+                      "LET & CONST" variable name initial set in
+                      <em>Local Scope</em> a value is
+                      <em>for VAR => "undefine"</em> & in local scope
+                      <strong
+                        >@@ no script ?? In Script i.e =>
+                        <em>lexical scope is temprory dead zone</em>, shows the
+                        value</strong
+                      >
+                      <em>for LET AND CONST => "value unavailable"</em>=> this
+                      process is called hoisting
+                      <strong>return is => undefine</strong>
+                    </p>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>
+                  Arrow function assign "Let & Const"<strong>inside</strong>
+                  that declare
+                  <em>VAR or LET and CONST</em>
+                </strong>
+                <ul>
+                  <li>
+                    <h4>Assign Arrow func "Let & Const" in Script</h4>
+                    <p>
+                      MA(frist run)- variable name initial set a value is
+                      <em>"name unavailable"</em>=> this process is called
+                      hoisting
+                      <br />
+                      <strong
+                        >In Script i.e =>
+                        <em>lexical scope is temprory dead zone</em>, shows the
+                        value "value unavailable"</strong
+                      >
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <h4>
+                      Inside Arrow func "Var and Let or Const" in Local scope
+                      once accomplished it will closed
+                    </h4>
+                    <p>
+                      MA(frist run)- Normal function inside declare a "VAR" and
+                      "LET & CONST" variable name initial set in
+                      <em>Local Scope</em> a value is
+                      <em>for VAR => "undefine"</em> & in local scope
+                      <strong
+                        >@@@ No script ?? In Script i.e =>
+                        <em>lexical scope is temprory dead zone</em>, shows the
+                        value</strong
+                      >
+                      <em>for LET AND CONST => "value unavailable"</em>=> this
+                      process is called hoisting
+                      <strong>return is => undefine</strong>
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Anoymous function></strong>
+                <ul>
+                    <li>
+                <h4>Assign var /let/const  for variable name</h4>
+                <code>
+                    var/let/const anoyFuncVarCalling = function(){
+                        <br>
+                        let varName = "user1";
+                        <br>
+                        console.log("assgin inside function",varName);
+                        <br>
+                    }
+                    <br>
+                    anoyFuncVarCalling();<br>
+                </code>
+                <strong>Immideate or initial memory allocation VAR => in Global scope or LET & CONST => in Script</strong>
+                <p> Inside function same treatment</p>
+                </li>
+                <li>
+                    <h4>Assign var /let/const  for variable name</h4>
+                    <code>
+                        // IIFE = immediate Invokation function excetion
+                        <br>
+                        <br>
+                        (function (param){<br>
+                            let varName = "user1";<br>
+                            console.log("assgin inside function",varName + param);<br>
+                        })("kumar")<br>
+                        <br>
+                        // number manuculation
+                        <br>
+                        (function (value1){<br>
+                            let value2 =15;<br>
+                            console.log("addtion",value1+value2);<br>
+                        })(12)<br>
+                        i am facing error in this function I don't know where I did mistake
+                    </code>
+                    <strong> </strong>
+                    </li>
+            </ul>
+            </li>
+            </ul>
+           
+          </li>
+            <li>Execute(second run)- variable name as assign a actuall value</li>
+        </ul>
+        <br>
+        <li>steps function hosing ended</li>
+      </ul>
+    </ul>
+    <script src="./hoistingVariable/hoistingVariable.js"></script>
+    <script src="./hoistingFunc/hoistingFunc.js"></script>
+    <script src="./scopeVariable.js"></script>
+    <!-- <script src="./JsObjectNotation.js"></script> -->
+  </body>
 </html>

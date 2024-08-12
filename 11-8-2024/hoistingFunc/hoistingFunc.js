@@ -3,7 +3,7 @@
 funcCalling();
 
 function funcCalling(){
-    let varName = "user1";
+    var varName = "user1";
     console.log("assgin inside function",varName);
 }
 
@@ -12,7 +12,7 @@ function funcCalling(){
 // Calling before initialling
 // funcVarCalling();
 
-let funcVarCalling=()=>{
+var funcVarCalling=()=>{
     let varName = "user1";
     console.log("assgin inside function",varName);
 }
@@ -35,6 +35,7 @@ anoyFuncVarCalling();
 })("kumar")
 
 // number manuculation
+
 (function (value1){
     let value2 =15;
     console.log("addtion",value1+value2);
