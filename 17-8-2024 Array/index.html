@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Documentation</title>
+  </head>
+  <body>
+    <h1>Array</h1>
+    <h2>Array is storing the value in continues order</h2>
+
+    <ul>
+      <h2>Fixed Array</h2>
+      <li>
+        Some language as still fixed array like => c,c++,golang eg: int [5]
+        ={1,2,3,4,5}
+      </li>
+      <li>Single DataType can store single array:</li>
+      <ul>
+        <li>int 4byte</li>
+        <li>float 4byte</li>
+        <li>double 8byte</li>
+        <li>char 1byte</li>
+      </ul>
+      <h2>Dynamic Array</h2>
+      <li>
+        Some language as still dynamic array like => java-stript, python eg:
+        below
+      </li>
+      <li>Different DataType array store in single array itself</li>
+      <br />
+      <code>
+        eg: var arr = [1, "saran", true, {language:
+        ["Tamil","English"]},playing=["chess","footbal","cricket"]]
+      </code>
+      <br />
+      <h4>Result:</h4>
+      <code>
+        [ 1, "saran", true, { "language": [ "Tamil", "English" ] }, [ "chess",
+        "footbal", "cricket" ] ]
+        <br />
+        <code>
+          <br />
+          0-number: 1<br />
+          1-string: "saran"<br />
+          2-boolean: true<br />
+          3-object: {language: Array(2)}<br />
+          4-array: (3) ['chess', 'footbal', 'cricket']<br />
+          length: 5
+        </code>
+      </code>
+    </ul>
+    <p>------------------------------------------------------</p>
+    <h2>Call By value vs Call by Reference</h2>
+    <h4>Call by value</h4>
+    <ul>
+    <li>
+      <b><u>Number ,String, Boolean</u></b>=> we use call by value only, because each
+      variable have different address, after changes the original variable it won't affect the other
+      variable address. eg given in arr.js
+      <br>
+      <strong>In the above case we cann't use call by reference</strong>
+    </li>
+    <li>
+        <b><u>Array </u>=></b>
+    </li>
+</ul>
+    <script src="./arr.js"></script>
+    <!-- array Method -->
+    <script src="./arrayMethod/commonMenthod.js"></script>
+    <script src="./arrayMethod/mapArr.js"></script>
+    <script src="./arrayMethod/filterArr.js"></script>
+    <script src="./arrayMethod/reduceArr.js"></script>
+    <script src="./Pratice.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype and This</title>
+  </head>
+  <body>
+    <div>
+      <h1>This and Prototype</h1>
+      <h2>This keyword</h2>
+      <p>target "parent object" -> windows</p>
+      <code>
+        const stuudentObj ={<br />
+        name:"user1",<br />
+        getMyName(){<br />
+        console.log("what is 'this'");<br />
+        console.log("Calling Immediate parent Object",this);<br />
+        console.log("Calling Immediate parent Object eg getting
+        Name:",this.name);<br />
+        }<br />
+        };<br />
+
+        stuudentObj.getMyName();<br />
+      </code>
+      <br />
+      <strong>targett Immediate parent Object</strong>
+      <h2>Prototype</h2>
+      <p></p>
+      <code>
+        Array.prototype.myMap = function(params) {<br>
+        let temp =[]; <br>
+        for(let i=0;i<this.length;i++){<br> 
+        // console.log(this[i],i);<br>
+        temp.push(params(this[i],i))<br>
+         } <br>
+         return temp; }<br>
+         <br>
+        arr.myMap((val,i)=>{console.log(val,i); })<br>
+      </code>
+      <strong>Result :</strong>
+      <span>[
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+    ]</span>
+    </div>
+
+    <script src="./this.js"></script>
+    <script src="./prototype.js"></script>
+  </body>
+</html>

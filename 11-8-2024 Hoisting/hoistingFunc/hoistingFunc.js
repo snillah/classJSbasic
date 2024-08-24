@@ -32,11 +32,12 @@ anoyFuncVarCalling();
 (function (param){
     let varName = "user1";
     console.log("assgin inside function",varName + param);
-})("kumar")
+})("kumar");
+console.log("we cann't call like this ()()");
 
 // number manuculation
 
 (function (value1){
     let value2 =15;
     console.log("addtion",value1+value2);
-})(12)
+})(12);

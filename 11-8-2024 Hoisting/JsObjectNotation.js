@@ -17,4 +17,5 @@ let i =0;
 while(i<key.length){
     console.log("dot notation",object1+"."+`${[key[i]]}`);
     // Dot Natation
+    i++;
 }
