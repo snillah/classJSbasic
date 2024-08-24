@@ -15,7 +15,7 @@
         Some language as still fixed array like => c,c++,golang eg: int [5]
         ={1,2,3,4,5}
       </li>
-      <li>Single DataType can store single array:</li>
+      <li>Single DataType can store in single array:</li>
       <ul>
         <li>int 4byte</li>
         <li>float 4byte</li>
@@ -52,17 +52,22 @@
     </ul>
     <p>------------------------------------------------------</p>
     <h2>Call By value vs Call by Reference</h2>
-    <h4>Call by value</h4>
+    <!-- <h4>Call by value</h4> -->
     <ul>
     <li>
-      <b><u>Number ,String, Boolean</u></b>=> we use call by value only, because each
+      <b><u>Number ,String, Boolean</u></b>=> we use <b>call by value</b> only, because each
       variable have different address, after changes the original variable it won't affect the other
       variable address. eg given in arr.js
       <br>
-      <strong>In the above case we cann't use call by reference</strong>
+      <span>In the above case we cann't use <strong>call by reference</strong></span>
     </li>
+    <br>
     <li>
-        <b><u>Array </u>=></b>
+        <u><b>Array </b></u>=> For array we can use both call by value and call by reference
+        <ul>
+        <li>For call by value => The address will be different, for that we use spread operator</li>
+        <li>For call by reference => The address not change, so its change the original array also, when it change the copied/duplicate array</li>
+      </ul>
     </li>
 </ul>
     <script src="./arr.js"></script>

@@ -25,9 +25,9 @@ console.log("change b value as 22/rose/false:",b);
 // b ="rose"
 console.log("a :",a,"b :",b,"This is call by value=> it doesn't change the value of 'a'");
 console.log("Answer : the Address of the 'a' and 'b' are not same, so it not changing the value of a");
-console.log("====================================================================");
+console.log(".............................................................");
 
-console.log("Copy by value of Array");
+console.log("Copy by value of Array by using spread operator");
 let arr11 = [1,2,3,4,5,6]
 console.log("arr1",arr11);
 let arr12 = [...arr11]
@@ -35,7 +35,13 @@ console.log("arr2",arr12);
 arr11[2] =30
 console.log("changes in arr11[2]=30 arr1",arr11);
 console.log("arr2",arr12,"result changed");
+
+
+
 console.log("============call by Reference=========================");
+console.log("The string/boolean/number cann't do call by reference");
+
+console.log("........................................................");
 
 console.log("Copy by Reference of Array");
 let arr1 = [1,2,3,4,5,6]
